@@ -1,0 +1,55 @@
+{
+  "name": "react-wishlist",
+  "version": "1.0.0",
+  "description": "Práctica LMSGI 1º Intalación react",
+  "main": "index.js",
+  "scripts": {
+    "start": "parcel index.html",
+    "lint": "eslint --fix \"*.{js,jsx}\"",
+    "format": "prettier --write \"*.{js,jsx,json,css}\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/luisaparra-info/react-wishlist.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/luisaparra-info/react-wishlist/issues"
+  },
+  "homepage": "https://github.com/luisaparra-info/react-wishlist#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.56.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-jsx-a11y": "^6.8.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "parcel-bundler": "^1.12.5",
+    "prettier": "^3.2.4"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commint": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "npm run lint"
+    ],
+    "*.{js,jsx,json,css,scss}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "prettier": {
+    "trailingComma": "all",
+    "singleQuote": true
+  }
+}
